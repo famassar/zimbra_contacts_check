@@ -9,10 +9,10 @@
 $PWD=`pwd`;
 chomp($PWD);
 open(my $data, '<', "lista.csv") or die "Could not open '$file' $!\n";
-`sed -i '/galsync/d' /tmp/emails.txt`
-`sed -i '/ham/d' /tmp/emails.txt`
-`sed -i '/virus/d' /tmp/emails.txt`
-`rm -f /tmp/*@*`
+`sed -i '/galsync/d' /tmp/emails.txt`;
+`sed -i '/ham/d' /tmp/emails.txt`;
+`sed -i '/virus/d' /tmp/emails.txt`;
+`rm -f /tmp/*@*`;
 $R="mv /tmp/emails.txt ".$PWD."/";
 system $(R);
 while (my $line = <$data>) {
