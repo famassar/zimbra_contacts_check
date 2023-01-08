@@ -13,6 +13,8 @@ open(my $data, '<', "lista.csv") or die "Could not open '$file' $!\n";
 `sed -i '/ham/d' /tmp/emails.txt`
 `sed -i '/virus/d' /tmp/emails.txt`
 `rm -f /tmp/*@*`
+$R="mv /tmp/emails.txt ".$PWD."/";
+system $(R);
 while (my $line = <$data>) {
   chomp $line;
 
@@ -26,3 +28,4 @@ $B="bash ".$PWD."\/exec.sh";
 system($B);
 }
 `find /tmp -size 0 -print -delete`
+## In the /tmp directory you find the files corresponding to the accounts with saved contacts
