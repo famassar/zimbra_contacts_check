@@ -5,7 +5,7 @@
 ## CONTROLLARE IL NUMERO DI ACCOUNTS E CONFRONTARE con la lista su Zimbra
 # [cat /tmp/lista.csv|grep spam]
 ## CONTROLLARE A MANO GLI ACCOUNT CHE INIZIANO PER "spam", ce ne possono essere alcuni validi oltre a quello di default (spam.*)
-# [sed -i '/spam.lagxu1cz@hexgroup.net/d' /tmp/lista.csv]
+# [sed -i '/spam.lagxu1cz@domain.tld/d' /tmp/lista.csv]
 $PWD=`pwd`;
 chomp($PWD);
 `sed -i '/galsync/d' /tmp/lista.csv`;
